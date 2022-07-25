@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:projectwork/signup.dart';
 import 'package:projectwork/splash.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
